@@ -41,7 +41,7 @@ The following are developer notes on how to build ValinorPayCoin on your native 
 
 Development
 ---------------------
-The Valinorpaycoin repo's [root README](https://github.com/PayQ/ValinorPayCoin/blob/master/README.md) contains relevant information on the development process and automated testing.
+The Valinorpaycoin repo's [root README](https://github.com/ValinorPayCoin-Project/ValinorPayCoin/blob/master/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
