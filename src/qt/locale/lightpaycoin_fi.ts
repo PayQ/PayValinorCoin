@@ -172,16 +172,16 @@
         <translation>Vahvista lompakon salaus</translation>
     </message>
     <message>
-        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
-        <translation>ValinorPayCoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella LPCien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
+        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VPCs from being stolen by malware infecting your computer.</source>
+        <translation>ValinorPayCoin sulkeutuu salausprosessin ajaksi. Muista, että lompakon salaus ei voi täysin suojella VPCien varkaudelta, jos tietokoneesi sisältää haittaohjelmia.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Oletko varma että tahdot salata lompakkosi?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LPC&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki LPCisi&lt;/b&gt;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VPC&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja unohdat salausavaimesi, &lt;b&gt;menetät kaikki VPCisi&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1135,11 +1135,11 @@ Please check the address and try again.</source>
         <translation>Valitse yksityisyyden taso.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 LPC</source>
+        <source>Use 2 separate masternodes to mix funds up to 10000 VPC</source>
         <translation>Käytä 2 erillistä masternodea sekoittaaksesi enintään 10000 ValinorPayCoin</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 LPC</source>
+        <source>Use 8 separate masternodes to mix funds up to 10000 VPC</source>
         <translation>Käytä 8 erillistä masternodea sekoittaaksesi enintään 10000 ValinorPayCoin</translation>
     </message>
     <message>
@@ -1147,11 +1147,11 @@ Please check the address and try again.</source>
         <translation>Käytä 16 erillistä masternodea</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 LPC to anonymize 10000 LPC</source>
-        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 LPC anonymoidaksesi 10000 ValinorPayCoin</translation>
+        <source>This option is the quickest and will cost about ~0.025 VPC to anonymize 10000 VPC</source>
+        <translation>Tämä vaihtoehto on nopein ja maksaa noin ~0.025 VPC anonymoidaksesi 10000 ValinorPayCoin</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 LPC to anonymize 10000 LPC</source>
+        <source>This option is moderately fast and will cost about 0.05 VPC to anonymize 10000 VPC</source>
         <translation>Tämä vaihtoehto on suhteellisen nopea ja maksaa 0.05 ValinorPayCoin anonymoidaksesi 10000 ValinorPayCoin</translation>
     </message>
     <message>
@@ -1159,7 +1159,7 @@ Please check the address and try again.</source>
         <translation>Tämä on hitain ja turvallisin vaihtoehto. Täydesti anonymisoiminen ei maksa mitään.</translation>
     </message>
     <message>
-        <source>0.1 LPC per 10000 LPC you anonymize.</source>
+        <source>0.1 VPC per 10000 VPC you anonymize.</source>
         <translation>0.1 per 10000 ValinorPayCoin, jotka anonymisoit.</translation>
     </message>
     <message>
@@ -1835,8 +1835,8 @@ Please check the address and try again.</source>
         <translation>Muutos:</translation>
     </message>
     <message>
-        <source>0 LPC</source>
-        <translation>0 LPC</translation>
+        <source>0 VPC</source>
+        <translation>0 VPC</translation>
     </message>
     <message>
         <source>Choose...</source>

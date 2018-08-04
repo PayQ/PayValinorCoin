@@ -176,16 +176,16 @@
         <translation>Confirmar la encriptación de la Wallet</translation>
     </message>
     <message>
-        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
-        <translation>ValinorPayCoin se cerrará ahora para finalizar el proceso de encriptación. Recuerde que encriptar su Wallet no previene completamente que tus LPCs sean robados mediante malware infectando su ordenador.</translation>
+        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your VPCs from being stolen by malware infecting your computer.</source>
+        <translation>ValinorPayCoin se cerrará ahora para finalizar el proceso de encriptación. Recuerde que encriptar su Wallet no previene completamente que tus VPCs sean robados mediante malware infectando su ordenador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>¿Esta seguro de que desea encriptar tu Wallet?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LPC&lt;/b&gt;!</source>
-        <translation>Atención: Si encripta su Wallet y pierde su contraseña, perderá &lt;b&gt; TODOS SUS LPC&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VPC&lt;/b&gt;!</source>
+        <translation>Atención: Si encripta su Wallet y pierde su contraseña, perderá &lt;b&gt; TODOS SUS VPC&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -1544,32 +1544,32 @@ Por favor compruebe la dirección e inténtelo de nuevo.</translation>
         <translation>Por favor selecciones un nivel de privacidad.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 LPC</source>
-        <translation>Use 2 nodos maestros diferentes para mezclar los fondos hasta los 10000 LPC</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 VPC</source>
+        <translation>Use 2 nodos maestros diferentes para mezclar los fondos hasta los 10000 VPC</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 LPC</source>
-        <translation>Use 8 nodos maestros diferentes para mezclar fondos hasta los 10000 LPC</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 VPC</source>
+        <translation>Use 8 nodos maestros diferentes para mezclar fondos hasta los 10000 VPC</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 nodos maestros diferentes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 LPC to anonymize 10000 LPC</source>
-        <translation>Esta opción es la más rápida y costará alrededor de ~0.025 LPC para anonimizar 10000 LPC</translation>
+        <source>This option is the quickest and will cost about ~0.025 VPC to anonymize 10000 VPC</source>
+        <translation>Esta opción es la más rápida y costará alrededor de ~0.025 VPC para anonimizar 10000 VPC</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 LPC to anonymize 10000 LPC</source>
-        <translation>Esta opción es moderadamente rápida y costará cerca de 0.05 LPC para anonimizar 10000 LPC.</translation>
+        <source>This option is moderately fast and will cost about 0.05 VPC to anonymize 10000 VPC</source>
+        <translation>Esta opción es moderadamente rápida y costará cerca de 0.05 VPC para anonimizar 10000 VPC.</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta es la opción más lenta pero más segura. Usar el máximo anonimato costará</translation>
     </message>
     <message>
-        <source>0.1 LPC per 10000 LPC you anonymize.</source>
-        <translation>0.1 LPC por 10000 LPC que anonimizas.</translation>
+        <source>0.1 VPC per 10000 VPC you anonymize.</source>
+        <translation>0.1 VPC por 10000 VPC que anonimizas.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
@@ -1927,8 +1927,8 @@ https://www.transifex.com/valinorpaycoin-project/valinorpaycoin-project-translat
         <translation>Balance de Ofuscación:</translation>
     </message>
     <message>
-        <source>0 LPC / 0 Rounds</source>
-        <translation>0 LPC / 0 Rondas</translation>
+        <source>0 VPC / 0 Rounds</source>
+        <translation>0 VPC / 0 Rondas</translation>
     </message>
     <message>
         <source>Enabled/Disabled</source>
@@ -2793,8 +2793,8 @@ https://www.transifex.com/valinorpaycoin-project/valinorpaycoin-project-translat
         <translation>Tamaño de UTXO:</translation>
     </message>
     <message>
-        <source>0 LPC</source>
-        <translation>0 LPC</translation>
+        <source>0 VPC</source>
+        <translation>0 VPC</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -2841,12 +2841,12 @@ https://www.transifex.com/valinorpaycoin-project/valinorpaycoin-project-translat
         <translation>Tiempo de confirmación:</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uLPCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uLPCs in fee,&lt;br /&gt;while "at least" pays 1000 uLPCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uLPCs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uLPCs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uLPCs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uVPCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVPCs in fee,&lt;br /&gt;while "at least" pays 1000 uVPCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uVPCs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uVPCs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uVPCs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uLPCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uLPCs in fee,&lt;br /&gt;while "total at least" pays 1000 uLPCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uLPCs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uLPCs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uLPCs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uVPCs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uVPCs in fee,&lt;br /&gt;while "total at least" pays 1000 uVPCs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uVPCs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uVPCs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uVPCs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
         <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for ValinorPayCoin transactions than the network can process.</source>
@@ -3841,8 +3841,8 @@ https://www.transifex.com/valinorpaycoin-project/valinorpaycoin-project-translat
         <translation>Enviar Monedas</translation>
     </message>
     <message>
-        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 LPC.</source>
-        <translation>SwiftTX no soporta el envío de importes tan altos todavía. Las transacciones están actualmente limitadas a %1 LPC.</translation>
+        <source>SwiftTX doesn't support sending values that high yet. Transactions are currently limited to %1 VPC.</source>
+        <translation>SwiftTX no soporta el envío de importes tan altos todavía. Las transacciones están actualmente limitadas a %1 VPC.</translation>
     </message>
 </context>
 <context>
@@ -3975,12 +3975,12 @@ https://www.transifex.com/valinorpaycoin-project/valinorpaycoin-project-translat
         <translation>Ejecutar comando cuando el mejor bloque cambie (%s en cmd es reemplazado por el block hash)</translation>
     </message>
     <message>
-        <source>Fees (in LPC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Comisiones (en LPC/Kb) menores a esta son consideradas gratuitas para la propagación de la transacción (default: %s)</translation>
+        <source>Fees (in VPC/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Comisiones (en VPC/Kb) menores a esta son consideradas gratuitas para la propagación de la transacción (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in LPC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Comisiones (en LPC/Kb) menores a esta son consideradas gratuitas para la creación de la transacción (default: %s)</translation>
+        <source>Fees (in VPC/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Comisiones (en VPC/Kb) menores a esta son consideradas gratuitas para la creación de la transacción (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -4115,12 +4115,12 @@ por ejemplo: alertnotify=echo %%s | mail -s "ValinorPayCoin Alert" admin@foo.com
         <translation>Imposible localizar suficientes fondos denominados de Ofuscación para esta transacción.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 LPC.</source>
-        <translation>Imposible localizar suficientes fondos no-denominados de Ofuscación para esta transacción que no es igual a 10000 LPC.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 VPC.</source>
+        <translation>Imposible localizar suficientes fondos no-denominados de Ofuscación para esta transacción que no es igual a 10000 VPC.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 LPC.</source>
-        <translation>Imposible localizar fondos suficientes para esta transacción que no es igual a 10000 LPC.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 VPC.</source>
+        <translation>Imposible localizar fondos suficientes para esta transacción que no es igual a 10000 VPC.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -4407,8 +4407,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "ValinorPayCoin Alert" admin@foo.com
         <translation>Falló al leer el bloque</translation>
     </message>
     <message>
-        <source>Fee (in LPC/kB) to add to transactions you send (default: %s)</source>
-        <translation>Comisión (en LPC/kB) para agregar a la transacción que envías (predeterminado: %s)</translation>
+        <source>Fee (in VPC/kB) to add to transactions you send (default: %s)</source>
+        <translation>Comisión (en VPC/kB) para agregar a la transacción que envías (predeterminado: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -4579,8 +4579,8 @@ por ejemplo: alertnotify=echo %%s | mail -s "ValinorPayCoin Alert" admin@foo.com
         <translation>Activar funcionalidad de recompensa por participación (0-1, por defecto: %u)</translation>
     </message>
     <message>
-        <source>Keep N LPC anonymized (default: %u)</source>
-        <translation>Mantener N LPC anonimizados (predeterminado: %u)</translation>
+        <source>Keep N VPC anonymized (default: %u)</source>
+        <translation>Mantener N VPC anonimizados (predeterminado: %u)</translation>
     </message>
     <message>
         <source>Keep at most &lt;n&gt; unconnectable transactions in memory (default: %u)</source>

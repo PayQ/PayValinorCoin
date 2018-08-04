@@ -33,7 +33,7 @@ class TxViewDelegate : public QAbstractItemDelegate
 {
     Q_OBJECT
 public:
-    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::LPC)
+    TxViewDelegate() : QAbstractItemDelegate(), unit(BitcoinUnits::VPC)
     {
     }
 
@@ -271,7 +271,7 @@ void OverviewPage::setWalletModel(WalletModel* model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("LPC")
+    // update the display unit, to not use the default ("VPC")
     updateDisplayUnit();
 }
 
