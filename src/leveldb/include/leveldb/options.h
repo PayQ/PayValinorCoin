@@ -115,7 +115,7 @@ struct Options {
   // Compress blocks using the specified compression algorithm.  This
   // parameter can be changed dynamically.
   //
-  // Default: kSnappyCompression, which gives lightweight but fast
+  // Default: kSnappyCompression, which gives valinorweight but fast
   // compression.
   //
   // Typical speeds of kSnappyCompression on an Intel(R) Core(TM)2 2.4GHz:

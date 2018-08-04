@@ -20,7 +20,7 @@ With the client installed we'll proceed to download the blockchain torrent file.
 
 The download page should look like this, with a countdown to the download. If it does not work click the direct download link.
 
-The torrent client installed will recognize the download of the torrent file. Save the bootstrap.dat file to the folder you use for downloads. The image below shows the torrent download in qBittorrent, with current speed and ETA highlighted.
+The torrent client installed will recognize the download of the torrent file. Save the bootstrap.dat file to the folder you use for downloads. The image below shows the torrent download in qBittorrent, with current speed and ETA highvalinored.
 
 ![Fig2](img/bootstrap2.png)
 

@@ -31,7 +31,7 @@ fi
 
 case $1 in
 
-  --is-lightweight)
+  --is-valinorweight)
     # Used by our autoconf macros to check whether the available missing
     # script is modern enough.
     exit 0

@@ -49,7 +49,7 @@ static std::string ValueToString(CAmount nValue, bool AllowNegative = false)
     return std::string("<span>") + Str.toUtf8().data() + "</span>";
 }
 
-static std::string ScriptToString(const CScript& Script, bool Long = false, bool Highlight = false)
+static std::string ScriptToString(const CScript& Script, bool Long = false, bool Highvalinor = false)
 {
     if (Script.empty())
         return "unknown";
@@ -57,7 +57,7 @@ static std::string ScriptToString(const CScript& Script, bool Long = false, bool
     CTxDestination Dest;
     CBitcoinAddress Address;
     if (ExtractDestination(Script, Dest) && Address.Set(Dest)) {
-        if (Highlight)
+        if (Highvalinor)
             return "<span class=\"addr\">" + Address.ToString() + "</span>";
         else
             return makeHRef(Address.ToString());
@@ -95,7 +95,7 @@ static std::string makeHTMLTable(const std::string* pCells, int nRows, int nColu
     return Table;
 }
 
-static std::string TxToRow(const CTransaction& tx, const CScript& Highlight = CScript(), const std::string& Prepend = std::string(), int64_t* pSum = NULL)
+static std::string TxToRow(const CTransaction& tx, const CScript& Highvalinor = CScript(), const std::string& Prepend = std::string(), int64_t* pSum = NULL)
 {
     std::string InAmounts, InAddresses, OutAmounts, OutAddresses;
     int64_t Delta = 0;
@@ -106,8 +106,8 @@ static std::string TxToRow(const CTransaction& tx, const CScript& Highlight = CS
         } else {
             CTxOut PrevOut = getPrevOut(tx.vin[j].prevout);
             InAmounts += ValueToString(PrevOut.nValue);
-            InAddresses += ScriptToString(PrevOut.scriptPubKey, false, PrevOut.scriptPubKey == Highlight).c_str();
-            if (PrevOut.scriptPubKey == Highlight)
+            InAddresses += ScriptToString(PrevOut.scriptPubKey, false, PrevOut.scriptPubKey == Highvalinor).c_str();
+            if (PrevOut.scriptPubKey == Highvalinor)
                 Delta -= PrevOut.nValue;
         }
         if (j + 1 != tx.vin.size()) {
@@ -118,8 +118,8 @@ static std::string TxToRow(const CTransaction& tx, const CScript& Highlight = CS
     for (unsigned int j = 0; j < tx.vout.size(); j++) {
         CTxOut Out = tx.vout[j];
         OutAmounts += ValueToString(Out.nValue);
-        OutAddresses += ScriptToString(Out.scriptPubKey, false, Out.scriptPubKey == Highlight);
-        if (Out.scriptPubKey == Highlight)
+        OutAddresses += ScriptToString(Out.scriptPubKey, false, Out.scriptPubKey == Highvalinor);
+        if (Out.scriptPubKey == Highvalinor)
             Delta += Out.nValue;
         if (j + 1 != tx.vout.size()) {
             OutAmounts += "<br/>";
@@ -140,7 +140,7 @@ static std::string TxToRow(const CTransaction& tx, const CScript& Highlight = CS
 
     int n = sizeof(List) / sizeof(std::string) - 2;
 
-    if (!Highlight.empty()) {
+    if (!Highvalinor.empty()) {
         List[n++] = std::string("<font color=\"") + ((Delta > 0) ? "green" : "red") + "\">" + ValueToString(Delta, true) + "</font>";
         *pSum += Delta;
         List[n++] = ValueToString(*pSum);
@@ -470,8 +470,8 @@ void BlockExplorer::showEvent(QShowEvent*)
         updateNavButtons();
 
         if (!GetBoolArg("-txindex", false)) {
-            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (lightpaycoin.conf).");
-            QMessageBox::warning(this, "LightPayCoin Core Blockchain Explorer", Warning, QMessageBox::Ok);
+            QString Warning = tr("Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (valinorpaycoin.conf).");
+            QMessageBox::warning(this, "ValinorPayCoin Core Blockchain Explorer", Warning, QMessageBox::Ok);
         }
     }
 }

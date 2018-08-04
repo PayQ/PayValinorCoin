@@ -76,17 +76,17 @@ PlatformStyle::PlatformStyle(const QString& name, bool imagesOnButtons, bool col
                                                                                                                     singleColor(0, 0, 0),
                                                                                                                     textColor(0, 0, 0)
 {
-    // Determine icon highlighting color
+    // Determine icon highvalinoring color
     if (colorizeIcons) {
-        const QColor colorHighlightBg(QApplication::palette().color(QPalette::Highlight));
-        const QColor colorHighlightFg(QApplication::palette().color(QPalette::HighlightedText));
+        const QColor colorHighvalinorBg(QApplication::palette().color(QPalette::Highvalinor));
+        const QColor colorHighvalinorFg(QApplication::palette().color(QPalette::HighvalinoredText));
         const QColor colorText(QApplication::palette().color(QPalette::WindowText));
-        const int colorTextLightness = colorText.lightness();
+        const int colorTextValinorness = colorText.valinorness();
         QColor colorbase;
-        if (abs(colorHighlightBg.lightness() - colorTextLightness) < abs(colorHighlightFg.lightness() - colorTextLightness))
-            colorbase = colorHighlightBg;
+        if (abs(colorHighvalinorBg.valinorness() - colorTextValinorness) < abs(colorHighvalinorFg.valinorness() - colorTextValinorness))
+            colorbase = colorHighvalinorBg;
         else
-            colorbase = colorHighlightFg;
+            colorbase = colorHighvalinorFg;
         singleColor = colorbase;
     }
     // Determine text color

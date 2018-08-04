@@ -3,7 +3,7 @@ Release Process
 
 Before every release candidate:
 
-* Update translations (ping Fuzzbawls on Slack) see [translation_process.md](https://github.com/LightPayCoin-Project/LightPayCoin/blob/master/doc/translation_process.md#synchronising-translations).
+* Update translations (ping Fuzzbawls on Slack) see [translation_process.md](https://github.com/ValinorPayCoin-Project/ValinorPayCoin/blob/master/doc/translation_process.md#synchronising-translations).
 
 Before every minor and major release:
 
@@ -24,12 +24,12 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 Check out the source code in the following directory hierarchy.
 
     cd /path/to/your/toplevel/build
-    git clone https://github.com/lightpaycoin-project/gitian.sigs.git
-    git clone https://github.com/lightpaycoin-project/lightpaycoin-detached-sigs.git
+    git clone https://github.com/valinorpaycoin-project/gitian.sigs.git
+    git clone https://github.com/valinorpaycoin-project/valinorpaycoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
-    git clone https://github.com/lightpaycoin-project/lightpaycoin.git
+    git clone https://github.com/valinorpaycoin-project/valinorpaycoin.git
 
-### LightPayCoin maintainers/release engineers, suggestion for writing release notes
+### ValinorPayCoin maintainers/release engineers, suggestion for writing release notes
 
 Write release notes. git shortlog helps a lot, for example:
 
@@ -50,7 +50,7 @@ If you're using the automated script (found in [contrib/gitian-build.sh](/contri
 
 Setup Gitian descriptors:
 
-    pushd ./LightPayCoin
+    pushd ./ValinorPayCoin
     export SIGNER=(your Gitian key, ie bluematt, sipa, etc)
     export VERSION=(new version, e.g. 0.8.0)
     git fetch
@@ -84,7 +84,7 @@ Create the OS X SDK tarball, see the [OS X readme](README_osx.md) for details, a
 By default, Gitian will fetch source files as needed. To cache them ahead of time:
 
     pushd ./gitian-builder
-    make -C ../LightPayCoin/depends download SOURCES_PATH=`pwd`/cache/common
+    make -C ../ValinorPayCoin/depends download SOURCES_PATH=`pwd`/cache/common
     popd
 
 Only missing files will be fetched, so this is safe to re-run for each build.
@@ -92,50 +92,50 @@ Only missing files will be fetched, so this is safe to re-run for each build.
 NOTE: Offline builds must use the --url flag to ensure Gitian fetches only from local URLs. For example:
 
     pushd ./gitian-builder
-    ./bin/gbuild --url lightpaycoin=/path/to/lightpaycoin,signature=/path/to/sigs {rest of arguments}
+    ./bin/gbuild --url valinorpaycoin=/path/to/valinorpaycoin,signature=/path/to/sigs {rest of arguments}
     popd
 
 The gbuild invocations below <b>DO NOT DO THIS</b> by default.
 
-### Build and sign LightPayCoin Core for Linux, Windows, and OS X:
+### Build and sign ValinorPayCoin Core for Linux, Windows, and OS X:
 
     pushd ./gitian-builder
-    ./bin/gbuild --memory 3000 --commit lightpaycoin=v${VERSION} ../LightPayCoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../LightPayCoin/contrib/gitian-descriptors/gitian-linux.yml
-    mv build/out/lightpaycoin-*.tar.gz build/out/src/lightpaycoin-*.tar.gz ../
+    ./bin/gbuild --memory 3000 --commit valinorpaycoin=v${VERSION} ../ValinorPayCoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-linux --destination ../gitian.sigs/ ../ValinorPayCoin/contrib/gitian-descriptors/gitian-linux.yml
+    mv build/out/valinorpaycoin-*.tar.gz build/out/src/valinorpaycoin-*.tar.gz ../
 
-    ./bin/gbuild --memory 3000 --commit lightpaycoin=v${VERSION} ../LightPayCoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../LightPayCoin/contrib/gitian-descriptors/gitian-win.yml
-    mv build/out/lightpaycoin-*-win-unsigned.tar.gz inputs/lightpaycoin-win-unsigned.tar.gz
-    mv build/out/lightpaycoin-*.zip build/out/lightpaycoin-*.exe ../
+    ./bin/gbuild --memory 3000 --commit valinorpaycoin=v${VERSION} ../ValinorPayCoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../ValinorPayCoin/contrib/gitian-descriptors/gitian-win.yml
+    mv build/out/valinorpaycoin-*-win-unsigned.tar.gz inputs/valinorpaycoin-win-unsigned.tar.gz
+    mv build/out/valinorpaycoin-*.zip build/out/valinorpaycoin-*.exe ../
 
-    ./bin/gbuild --memory 3000 --commit lightpaycoin=v${VERSION} ../LightPayCoin/contrib/gitian-descriptors/gitian-osx.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../LightPayCoin/contrib/gitian-descriptors/gitian-osx.yml
-    mv build/out/lightpaycoin-*-osx-unsigned.tar.gz inputs/lightpaycoin-osx-unsigned.tar.gz
-    mv build/out/lightpaycoin-*.tar.gz build/out/lightpaycoin-*.dmg ../
+    ./bin/gbuild --memory 3000 --commit valinorpaycoin=v${VERSION} ../ValinorPayCoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../ValinorPayCoin/contrib/gitian-descriptors/gitian-osx.yml
+    mv build/out/valinorpaycoin-*-osx-unsigned.tar.gz inputs/valinorpaycoin-osx-unsigned.tar.gz
+    mv build/out/valinorpaycoin-*.tar.gz build/out/valinorpaycoin-*.dmg ../
     popd
 
 Build output expected:
 
-  1. source tarball (`lightpaycoin-${VERSION}.tar.gz`)
-  2. linux 32-bit and 64-bit dist tarballs (`lightpaycoin-${VERSION}-linux[32|64].tar.gz`)
-  3. windows 32-bit and 64-bit unsigned installers and dist zips (`lightpaycoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `lightpaycoin-${VERSION}-win[32|64].zip`)
-  4. OS X unsigned installer and dist tarball (`lightpaycoin-${VERSION}-osx-unsigned.dmg`, `lightpaycoin-${VERSION}-osx64.tar.gz`)
+  1. source tarball (`valinorpaycoin-${VERSION}.tar.gz`)
+  2. linux 32-bit and 64-bit dist tarballs (`valinorpaycoin-${VERSION}-linux[32|64].tar.gz`)
+  3. windows 32-bit and 64-bit unsigned installers and dist zips (`valinorpaycoin-${VERSION}-win[32|64]-setup-unsigned.exe`, `valinorpaycoin-${VERSION}-win[32|64].zip`)
+  4. OS X unsigned installer and dist tarball (`valinorpaycoin-${VERSION}-osx-unsigned.dmg`, `valinorpaycoin-${VERSION}-osx64.tar.gz`)
   5. Gitian signatures (in `gitian.sigs/${VERSION}-<linux|{win,osx}-unsigned>/(your Gitian key)/`)
 
 ### Verify other gitian builders signatures to your own. (Optional)
 
 Add other gitian builders keys to your gpg keyring, and/or refresh keys.
 
-    gpg --import lightpaycoin/contrib/gitian-keys/*.pgp
+    gpg --import valinorpaycoin/contrib/gitian-keys/*.pgp
     gpg --refresh-keys
 
 Verify the signatures
 
     pushd ./gitian-builder
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../LightPayCoin/contrib/gitian-descriptors/gitian-linux.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../LightPayCoin/contrib/gitian-descriptors/gitian-win.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../LightPayCoin/contrib/gitian-descriptors/gitian-osx.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../ValinorPayCoin/contrib/gitian-descriptors/gitian-linux.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../ValinorPayCoin/contrib/gitian-descriptors/gitian-win.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../ValinorPayCoin/contrib/gitian-descriptors/gitian-osx.yml
     popd
 
 ### Next steps:
@@ -156,22 +156,22 @@ Codesigner only: Create Windows/OS X detached signatures:
 
 Codesigner only: Sign the osx binary:
 
-    transfer lightpaycoin-osx-unsigned.tar.gz to osx for signing
-    tar xf lightpaycoin-osx-unsigned.tar.gz
+    transfer valinorpaycoin-osx-unsigned.tar.gz to osx for signing
+    tar xf valinorpaycoin-osx-unsigned.tar.gz
     ./detached-sig-create.sh -s "Key ID"
     Enter the keychain password and authorize the signature
     Move signature-osx.tar.gz back to the gitian host
 
 Codesigner only: Sign the windows binaries:
 
-    tar xf lightpaycoin-win-unsigned.tar.gz
+    tar xf valinorpaycoin-win-unsigned.tar.gz
     ./detached-sig-create.sh -key /path/to/codesign.key
     Enter the passphrase for the key when prompted
     signature-win.tar.gz will be created
 
 Codesigner only: Commit the detached codesign payloads:
 
-    cd ~/lightpaycoin-detached-sigs
+    cd ~/valinorpaycoin-detached-sigs
     checkout the appropriate branch for this release series
     rm -rf *
     tar xf signature-osx.tar.gz
@@ -184,25 +184,25 @@ Codesigner only: Commit the detached codesign payloads:
 Non-codesigners: wait for Windows/OS X detached signatures:
 
 - Once the Windows/OS X builds each have 3 matching signatures, they will be signed with their respective release keys.
-- Detached signatures will then be committed to the [lightpaycoin-detached-sigs](https://github.com/LightPayCoin-Project/lightpaycoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
+- Detached signatures will then be committed to the [valinorpaycoin-detached-sigs](https://github.com/ValinorPayCoin-Project/valinorpaycoin-detached-sigs) repository, which can be combined with the unsigned apps to create signed binaries.
 
 Create (and optionally verify) the signed OS X binary:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../LightPayCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../LightPayCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../LightPayCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
-    mv build/out/lightpaycoin-osx-signed.dmg ../lightpaycoin-${VERSION}-osx.dmg
+    ./bin/gbuild -i --commit signature=v${VERSION} ../ValinorPayCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../ValinorPayCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../ValinorPayCoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+    mv build/out/valinorpaycoin-osx-signed.dmg ../valinorpaycoin-${VERSION}-osx.dmg
     popd
 
 Create (and optionally verify) the signed Windows binaries:
 
     pushd ./gitian-builder
-    ./bin/gbuild -i --commit signature=v${VERSION} ../LightPayCoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../LightPayCoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../LightPayCoin/contrib/gitian-descriptors/gitian-win-signer.yml
-    mv build/out/lightpaycoin-*win64-setup.exe ../lightpaycoin-${VERSION}-win64-setup.exe
-    mv build/out/lightpaycoin-*win32-setup.exe ../lightpaycoin-${VERSION}-win32-setup.exe
+    ./bin/gbuild -i --commit signature=v${VERSION} ../ValinorPayCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gsign --signer $SIGNER --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../ValinorPayCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    ./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-signed ../ValinorPayCoin/contrib/gitian-descriptors/gitian-win-signer.yml
+    mv build/out/valinorpaycoin-*win64-setup.exe ../valinorpaycoin-${VERSION}-win64-setup.exe
+    mv build/out/valinorpaycoin-*win32-setup.exe ../valinorpaycoin-${VERSION}-win32-setup.exe
     popd
 
 Commit your signature for the signed OS X/Windows binaries:
@@ -224,23 +224,23 @@ sha256sum * > SHA256SUMS
 
 The list of files should be:
 ```
-lightpaycoin-${VERSION}-aarch64-linux-gnu.tar.gz
-lightpaycoin-${VERSION}-arm-linux-gnueabihf.tar.gz
-lightpaycoin-${VERSION}-i686-pc-linux-gnu.tar.gz
-lightpaycoin-${VERSION}-x86_64-linux-gnu.tar.gz
-lightpaycoin-${VERSION}-osx64.tar.gz
-lightpaycoin-${VERSION}-osx.dmg
-lightpaycoin-${VERSION}.tar.gz
-lightpaycoin-${VERSION}-win32-setup.exe
-lightpaycoin-${VERSION}-win32.zip
-lightpaycoin-${VERSION}-win64-setup.exe
-lightpaycoin-${VERSION}-win64.zip
+valinorpaycoin-${VERSION}-aarch64-linux-gnu.tar.gz
+valinorpaycoin-${VERSION}-arm-linux-gnueabihf.tar.gz
+valinorpaycoin-${VERSION}-i686-pc-linux-gnu.tar.gz
+valinorpaycoin-${VERSION}-x86_64-linux-gnu.tar.gz
+valinorpaycoin-${VERSION}-osx64.tar.gz
+valinorpaycoin-${VERSION}-osx.dmg
+valinorpaycoin-${VERSION}.tar.gz
+valinorpaycoin-${VERSION}-win32-setup.exe
+valinorpaycoin-${VERSION}-win32.zip
+valinorpaycoin-${VERSION}-win64-setup.exe
+valinorpaycoin-${VERSION}-win64.zip
 ```
 The `*-debug*` files generated by the gitian build contain debug symbols
 for troubleshooting by developers. It is assumed that anyone that is interested
 in debugging can run gitian to generate the files for themselves. To avoid
 end-user confusion about which file to pick, as well as save storage
-space *do not upload these to the lightpaycoin.org server*.
+space *do not upload these to the valinorpaycoin.org server*.
 
 - GPG-sign it, delete the unsigned file:
 ```
@@ -256,10 +256,10 @@ Note: check that SHA256SUMS itself doesn't end up in SHA256SUMS, which is a spur
 
   - bitcointalk announcement thread
 
-  - Optionally twitter, reddit /r/lightpaycoin, ... but this will usually sort out itself
+  - Optionally twitter, reddit /r/valinorpaycoin, ... but this will usually sort out itself
 
   - Archive release notes for the new version to `doc/release-notes/` (branch `master` and branch of the release)
 
-  - Create a [new GitHub release](https://github.com/LightPayCoin-Project/LightPayCoin/releases/new) with a link to the archived release notes.
+  - Create a [new GitHub release](https://github.com/ValinorPayCoin-Project/ValinorPayCoin/releases/new) with a link to the archived release notes.
 
   - Celebrate

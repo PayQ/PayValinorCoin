@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "LightPayCoin"
-            VALUE "FileDescription",    "lightpaycoind (OSS daemon/client for Lightpaycoin)"
+            VALUE "CompanyName",        "ValinorPayCoin"
+            VALUE "FileDescription",    "valinorpaycoind (OSS daemon/client for Valinorpaycoin)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "lightpaycoind"
+            VALUE "InternalName",       "valinorpaycoind"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "lightpaycoind.exe"
-            VALUE "ProductName",        "lightpaycoind"
+            VALUE "OriginalFilename",   "valinorpaycoind.exe"
+            VALUE "ProductName",        "valinorpaycoind"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

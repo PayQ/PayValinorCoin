@@ -147,15 +147,15 @@ TEST(CacheTest, EvictionPolicy) {
 }
 
 TEST(CacheTest, HeavyEntries) {
-  // Add a bunch of light and heavy entries and then count the combined
+  // Add a bunch of valinor and heavy entries and then count the combined
   // size of items still in the cache, which must be approximately the
   // same as the total capacity.
-  const int kLight = 1;
+  const int kValinor = 1;
   const int kHeavy = 10;
   int added = 0;
   int index = 0;
   while (added < 2*kCacheSize) {
-    const int weight = (index & 1) ? kLight : kHeavy;
+    const int weight = (index & 1) ? kValinor : kHeavy;
     Insert(index, 1000+index, weight);
     added += weight;
     index++;
@@ -163,7 +163,7 @@ TEST(CacheTest, HeavyEntries) {
 
   int cached_weight = 0;
   for (int i = 0; i < index; i++) {
-    const int weight = (i & 1 ? kLight : kHeavy);
+    const int weight = (i & 1 ? kValinor : kHeavy);
     int r = Lookup(i);
     if (r >= 0) {
       cached_weight += weight;

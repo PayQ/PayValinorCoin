@@ -62,12 +62,12 @@
         <translation>Adresy pro přijetí peněz</translation>
     </message>
     <message>
-        <source>These are your LightPayCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Toto jsou Vaše LightPayCoin adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
+        <source>These are your ValinorPayCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Toto jsou Vaše ValinorPayCoin adresy pro poslání platby. Vždy si překontrolujte množství peněz a cílovou adresu než platbu odešlete.</translation>
     </message>
     <message>
-        <source>These are your LightPayCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Toto jsou Vaše LightPayCoin adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
+        <source>These are your ValinorPayCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Toto jsou Vaše ValinorPayCoin adresy pro přijetí plateb. Je doporučeno použít novou adresu pro každou novou transakci.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Potvrdit zašifrování peněženky</translation>
     </message>
     <message>
-        <source>LightPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
-        <translation>LightPayCoin se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše LPCy před krádží, pokud je Váš počítač infikován malwarem.</translation>
+        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
+        <translation>ValinorPayCoin se teď zavře pro dokončení šifrovacího procesu. Prosím, vemte na vědomí, že zašifrování Vaší peněženky plně neochrání Vaše LPCy před krádží, pokud je Váš počítač infikován malwarem.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -239,16 +239,16 @@
         <translation>&amp;BIP 38 Šifrovat</translation>
     </message>
     <message>
-        <source>Enter a Lightpaycoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Zadejte LightPayCoin adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
+        <source>Enter a Valinorpaycoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Zadejte ValinorPayCoin adresu, kterou si přejete zašifrovat pomocí BIP38. Frázové heslo zadejte do prostředního boxu. Stiskněte šifrovat pro výpočet šifrovaného privátního klíče.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresa:</translation>
     </message>
     <message>
-        <source>The LightPayCoin address to sign the message with</source>
-        <translation>LightPayCoin adresa pro podepsání zprávy</translation>
+        <source>The ValinorPayCoin address to sign the message with</source>
+        <translation>ValinorPayCoin adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LightPayCoin address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto LightPayCoin adresu</translation>
+        <source>Sign the message to prove you own this ValinorPayCoin address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto ValinorPayCoin adresu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -303,12 +303,12 @@
         <translation>Vložte BIP 38 šifrovaný privítní klíc. Frázové heslo vložte do prostředního boxu. Kliknětě na Dešifrovat Klíč pro výpočet privátního klíče. Poté co bude klíč dešifrován, kliknutím na 'Importovat Adresu' přidáte privátní klíč do Vaší peněženky.</translation>
     </message>
     <message>
-        <source>The LightPayCoin address the message was signed with</source>
-        <translation>LightPayCoin adresa zprávy byla podpsána</translation>
+        <source>The ValinorPayCoin address the message was signed with</source>
+        <translation>ValinorPayCoin adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LightPayCoin address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou LightPayCoin adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified ValinorPayCoin address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou ValinorPayCoin adresou</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -598,16 +598,16 @@
         <translation>Nástrojová lišta záložek</translation>
     </message>
     <message>
-        <source>LightPayCoin Core</source>
-        <translation>LightPayCoin Core</translation>
+        <source>ValinorPayCoin Core</source>
+        <translation>ValinorPayCoin Core</translation>
     </message>
     <message>
-        <source>Send coins to a LightPayCoin address</source>
-        <translation>Odeslat platbuna LightPayCoin adresu</translation>
+        <source>Send coins to a ValinorPayCoin address</source>
+        <translation>Odeslat platbuna ValinorPayCoin adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and lightpaycoin: URIs)</source>
-        <translation>Vyžádat platbu (generování QK kódu a lightpaycoin: URIs)</translation>
+        <source>Request payments (generates QR codes and valinorpaycoin: URIs)</source>
+        <translation>Vyžádat platbu (generování QK kódu a valinorpaycoin: URIs)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -618,24 +618,24 @@
         <translation>Procházet masternody</translation>
     </message>
     <message>
-        <source>&amp;About LightPayCoin Core</source>
-        <translation>&amp;O LightPayCoin Core</translation>
+        <source>&amp;About ValinorPayCoin Core</source>
+        <translation>&amp;O ValinorPayCoin Core</translation>
     </message>
     <message>
-        <source>Show information about LightPayCoin Core</source>
-        <translation>Zobraz informace o LightPayCoin Core</translation>
+        <source>Show information about ValinorPayCoin Core</source>
+        <translation>Zobraz informace o ValinorPayCoin Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for LightPayCoin</source>
-        <translation>Upravit možnosti konfigurace pro LightPayCoin</translation>
+        <source>Modify configuration options for ValinorPayCoin</source>
+        <translation>Upravit možnosti konfigurace pro ValinorPayCoin</translation>
     </message>
     <message>
-        <source>Sign messages with your LightPayCoin addresses to prove you own them</source>
-        <translation>Podepsat zprávy Vaší LightPayCoin adresou pro prokázaní, že jste jejich vlastníkem</translation>
+        <source>Sign messages with your ValinorPayCoin addresses to prove you own them</source>
+        <translation>Podepsat zprávy Vaší ValinorPayCoin adresou pro prokázaní, že jste jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LightPayCoin addresses</source>
-        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými LightPayCoin adresami</translation>
+        <source>Verify messages to ensure they were signed with specified ValinorPayCoin addresses</source>
+        <translation>Ověřit zprávy k zajištění, že bylypodepsány vybranými ValinorPayCoin adresami</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -666,8 +666,8 @@
         <translation>Otevřít Masternodový konfigurační soubor</translation>
     </message>
     <message>
-        <source>Open a LightPayCoin: URI or payment request</source>
-        <translation>Otevřít LightPayCoin: URI nebo platební žádost</translation>
+        <source>Open a ValinorPayCoin: URI or payment request</source>
+        <translation>Otevřít ValinorPayCoin: URI nebo platební žádost</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -678,12 +678,12 @@
         <translation>Okno blokového průzkumníka</translation>
     </message>
     <message>
-        <source>Show the LightPayCoin Core help message to get a list with possible LightPayCoin command-line options</source>
-        <translation>Zobrazit LightPayCoin Core pomocnou zpráv pro získání seznamu možných parametrů LightPayCoin pro příkazy do příkazové řádky</translation>
+        <source>Show the ValinorPayCoin Core help message to get a list with possible ValinorPayCoin command-line options</source>
+        <translation>Zobrazit ValinorPayCoin Core pomocnou zpráv pro získání seznamu možných parametrů ValinorPayCoin pro příkazy do příkazové řádky</translation>
     </message>
     <message>
-        <source>LightPayCoin Core client</source>
-        <translation>LightPayCoin Core klient</translation>
+        <source>ValinorPayCoin Core client</source>
+        <translation>ValinorPayCoin Core klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -809,8 +809,8 @@ MultiSend: %1</translation>
         <translation>TextPopisku</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (lightpaycoin.conf).</source>
-        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (lightpaycoin.conf) txindex=1.</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (valinorpaycoin.conf).</source>
+        <translation>Ne všechny transakce budou zobrazeny. Pro zobrazení všech transackí nastavte v konfiguračním souboru (valinorpaycoin.conf) txindex=1.</translation>
     </message>
 </context>
 <context>
@@ -1070,8 +1070,8 @@ MultiSend: %1</translation>
         <translation>Upravit adresu k odeslání platby</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid LightPayCoin address.</source>
-        <translation>Zadaná adresa "%1" není validní LightPayCoin adresa.</translation>
+        <source>The entered address "%1" is not a valid ValinorPayCoin address.</source>
+        <translation>Zadaná adresa "%1" není validní ValinorPayCoin adresa.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1116,12 +1116,12 @@ MultiSend: %1</translation>
         <translation>verze</translation>
     </message>
     <message>
-        <source>LightPayCoin Core</source>
-        <translation>LightPayCoin Core</translation>
+        <source>ValinorPayCoin Core</source>
+        <translation>ValinorPayCoin Core</translation>
     </message>
     <message>
-        <source>About LightPayCoin Core</source>
-        <translation>O LightPayCoin Core</translation>
+        <source>About ValinorPayCoin Core</source>
+        <translation>O ValinorPayCoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1155,16 +1155,16 @@ MultiSend: %1</translation>
         <translation>Vítejte</translation>
     </message>
     <message>
-        <source>Welcome to LightPayCoin Core.</source>
-        <translation>Vítejte v LightPayCoin Core.</translation>
+        <source>Welcome to ValinorPayCoin Core.</source>
+        <translation>Vítejte v ValinorPayCoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where LightPayCoin Core will store its data.</source>
-        <translation>Při prvním spuštění programu si můžete vybrat, kam bude LightPayCoin Core ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where ValinorPayCoin Core will store its data.</source>
+        <translation>Při prvním spuštění programu si můžete vybrat, kam bude ValinorPayCoin Core ukládat svá data.</translation>
     </message>
     <message>
-        <source>LightPayCoin Core will download and store a copy of the LightPayCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>LightPayCoin Core stáhne a uloží kopii LightPayCoin blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
+        <source>ValinorPayCoin Core will download and store a copy of the ValinorPayCoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>ValinorPayCoin Core stáhne a uloží kopii ValinorPayCoin blockchainu. Nejméně %1GB dat bude do této složky uloženo a v průběhu času bude ukládat další data. Peněženka bude v této složce uložena také.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1175,8 +1175,8 @@ MultiSend: %1</translation>
         <translation>Použít vlastní složku pro data</translation>
     </message>
     <message>
-        <source>LightPayCoin Core</source>
-        <translation>LightPayCoin Core</translation>
+        <source>ValinorPayCoin Core</source>
+        <translation>ValinorPayCoin Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1524,16 +1524,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically start LightPayCoin after logging in to the system.</source>
-        <translation>Automaticky spustit LightPayCoin po přihlášení do systému</translation>
+        <source>Automatically start ValinorPayCoin after logging in to the system.</source>
+        <translation>Automaticky spustit ValinorPayCoin po přihlášení do systému</translation>
     </message>
     <message>
-        <source>&amp;Start LightPayCoin on system login</source>
-        <translation>&amp;Spusti LightPayCoin při přihlášení do systému</translation>
+        <source>&amp;Start ValinorPayCoin on system login</source>
+        <translation>&amp;Spusti ValinorPayCoin při přihlášení do systému</translation>
     </message>
     <message>
-        <source>Amount of LightPayCoin to keep anonymized</source>
-        <translation>Počet LightPayCoin pro anonymní držení</translation>
+        <source>Amount of ValinorPayCoin to keep anonymized</source>
+        <translation>Počet ValinorPayCoin pro anonymní držení</translation>
     </message>
     <message>
         <source>Show Masternodes Tab</source>
@@ -2199,8 +2199,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The LightPayCoin address to sign the message with</source>
-        <translation>LightPayCoin adresa pro podepsání zprávy</translation>
+        <source>The ValinorPayCoin address to sign the message with</source>
+        <translation>ValinorPayCoin adresa pro podepsání zprávy</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2227,16 +2227,16 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
         <translation>Kopírovat aktuální podpis do systémové mezipaměti</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LightPayCoin address</source>
-        <translation>Podepsat zprávu k prokázání, že vlastníte tuto LightPayCoin adresu</translation>
+        <source>Sign the message to prove you own this ValinorPayCoin address</source>
+        <translation>Podepsat zprávu k prokázání, že vlastníte tuto ValinorPayCoin adresu</translation>
     </message>
     <message>
-        <source>The LightPayCoin address the message was signed with</source>
-        <translation>LightPayCoin adresa zprávy byla podpsána</translation>
+        <source>The ValinorPayCoin address the message was signed with</source>
+        <translation>ValinorPayCoin adresa zprávy byla podpsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LightPayCoin address</source>
-        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou LightPayCoin adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified ValinorPayCoin address</source>
+        <translation>Verifikujte zprávu pro ujištění, že byla podepsána zmíněnou ValinorPayCoin adresou</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2278,8 +2278,8 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>LightPayCoin Core</source>
-        <translation>LightPayCoin Core</translation>
+        <source>ValinorPayCoin Core</source>
+        <translation>ValinorPayCoin Core</translation>
     </message>
     </context>
 <context>
@@ -2382,7 +2382,7 @@ Prosím zkontrolujte adresu a zkuste to znovu.</translation>
     </message>
     </context>
 <context>
-    <name>lightpaycoin-core</name>
+    <name>valinorpaycoin-core</name>
     <message>
         <source>Error</source>
         <translation>Chyba</translation>

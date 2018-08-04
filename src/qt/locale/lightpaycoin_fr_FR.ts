@@ -152,8 +152,8 @@
         <translation>Confirmer le cryptage du portefeuille</translation>
     </message>
     <message>
-        <source>LightPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
-        <translation>LightPayCoin va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos LPCs d'un vol par un malware ayant infecté votre ordinateur. </translation>
+        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
+        <translation>ValinorPayCoin va maintenant se fermer pour finir le processus cryptage. Notez que le cryptage de votre portefeuille ne peut pas complètement protéger vos LPCs d'un vol par un malware ayant infecté votre ordinateur. </translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -211,16 +211,16 @@
         <translation>BIP 38 crypter</translation>
     </message>
     <message>
-        <source>Enter a Lightpaycoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Entrez une adresse Lightpaycoin que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
+        <source>Enter a Valinorpaycoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Entrez une adresse Valinorpaycoin que vous voulez crypter en utilisant BIP 38. Entrez une phrase secrète dans le champ du milieu. Cliquez sur crypter pour calculer la clé de cryptage privée.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Adresse :</translation>
     </message>
     <message>
-        <source>The LightPayCoin address to sign the message with</source>
-        <translation>L'adresse LightPayCoin avec laquelle signer le message</translation>
+        <source>The ValinorPayCoin address to sign the message with</source>
+        <translation>L'adresse ValinorPayCoin avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -251,8 +251,8 @@
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LightPayCoin address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse LightPayCoin</translation>
+        <source>Sign the message to prove you own this ValinorPayCoin address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse ValinorPayCoin</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -271,12 +271,12 @@
         <translation>BIP 38 Décrypter</translation>
     </message>
     <message>
-        <source>The LightPayCoin address the message was signed with</source>
-        <translation>L'adresse LightPayCoin avec laquelle le message a été signé</translation>
+        <source>The ValinorPayCoin address the message was signed with</source>
+        <translation>L'adresse ValinorPayCoin avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LightPayCoin address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse LightPayCoin renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified ValinorPayCoin address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse ValinorPayCoin renseignée</translation>
     </message>
     <message>
         <source>Decrypt &amp;Key</source>
@@ -534,8 +534,8 @@
         <translation>&amp;Aide</translation>
     </message>
     <message>
-        <source>Send coins to a LightPayCoin address</source>
-        <translation>Envoyer des pièces à une adresse LightPayCoin</translation>
+        <source>Send coins to a ValinorPayCoin address</source>
+        <translation>Envoyer des pièces à une adresse ValinorPayCoin</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -546,16 +546,16 @@
         <translation>Afficher les masternodes</translation>
     </message>
     <message>
-        <source>Modify configuration options for LightPayCoin</source>
-        <translation>Modifier les options de configuration pour LightPayCoin</translation>
+        <source>Modify configuration options for ValinorPayCoin</source>
+        <translation>Modifier les options de configuration pour ValinorPayCoin</translation>
     </message>
     <message>
-        <source>Sign messages with your LightPayCoin addresses to prove you own them</source>
-        <translation>Signer les messages avec votre adresse LightPayCoin pour prouver qu'elles sont bien à vous.</translation>
+        <source>Sign messages with your ValinorPayCoin addresses to prove you own them</source>
+        <translation>Signer les messages avec votre adresse ValinorPayCoin pour prouver qu'elles sont bien à vous.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LightPayCoin addresses</source>
-        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse LightPayCoin spécifié</translation>
+        <source>Verify messages to ensure they were signed with specified ValinorPayCoin addresses</source>
+        <translation>Vérifier les messages afin de s'assurer qu'ils sont signés avec l'adresse ValinorPayCoin spécifié</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -653,8 +653,8 @@ Adresse : %4
         <translation>Chercher</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (lightpaycoin.conf).</source>
-        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (lightpaycoin.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (valinorpaycoin.conf).</source>
+        <translation>Toutes les transaction ne seront pas affichés. Pour voir toutes les transactions, vous devez régler txindex=1 dans le fichier de configuration (valinorpaycoin.conf).</translation>
     </message>
 </context>
 <context>
@@ -854,8 +854,8 @@ Adresse : %4
         <translation>Modifier l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid LightPayCoin address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse LightPayCoin valide</translation>
+        <source>The entered address "%1" is not a valid ValinorPayCoin address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse ValinorPayCoin valide</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1461,8 +1461,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Payer à :</translation>
     </message>
     <message>
-        <source>The LightPayCoin address to send the payment to</source>
-        <translation>L'adresse LightPayCoin à laquelle envoyer le paiement</translation>
+        <source>The ValinorPayCoin address to send the payment to</source>
+        <translation>L'adresse ValinorPayCoin à laquelle envoyer le paiement</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1507,8 +1507,8 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Signer le message</translation>
     </message>
     <message>
-        <source>The LightPayCoin address to sign the message with</source>
-        <translation>L'adresse LightPayCoin avec laquelle signer le message</translation>
+        <source>The ValinorPayCoin address to sign the message with</source>
+        <translation>L'adresse ValinorPayCoin avec laquelle signer le message</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1535,16 +1535,16 @@ Veuillez vérifier l'adresse et réessayer.</translation>
         <translation>Copier la signature actuelle dans le presse-papier</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LightPayCoin address</source>
-        <translation>Signer le message pour prouver que vous possédez cette adresse LightPayCoin</translation>
+        <source>Sign the message to prove you own this ValinorPayCoin address</source>
+        <translation>Signer le message pour prouver que vous possédez cette adresse ValinorPayCoin</translation>
     </message>
     <message>
-        <source>The LightPayCoin address the message was signed with</source>
-        <translation>L'adresse LightPayCoin avec laquelle le message a été signé</translation>
+        <source>The ValinorPayCoin address the message was signed with</source>
+        <translation>L'adresse ValinorPayCoin avec laquelle le message a été signé</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LightPayCoin address</source>
-        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse LightPayCoin renseignée</translation>
+        <source>Verify the message to ensure it was signed with the specified ValinorPayCoin address</source>
+        <translation>Vérifiez le message afin de vous assurer qu'il a été signé avec l'adresse ValinorPayCoin renseignée</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1738,7 +1738,7 @@ Veuillez vérifier l'adresse et réessayer.</translation>
     </message>
     </context>
 <context>
-    <name>lightpaycoin-core</name>
+    <name>valinorpaycoin-core</name>
     <message>
         <source>Error</source>
         <translation>Erreur</translation>

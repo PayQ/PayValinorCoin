@@ -102,7 +102,7 @@ background-color:#dedbe5;
 }
 
 QWidget {
-selection-background-color:#27B0CC; /* Object highlight color */
+selection-background-color:#27B0CC; /* Object highvalinor color */
 selection-color:#fff;
 outline:0; /* Remove Annoying Focus Rectangle */
 }
@@ -778,12 +778,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 border:0;
 }
 
-/* About Lightpaycoin Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Lightpaycoin Contents */
+/* About Valinorpaycoin Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About Valinorpaycoin Contents */
 margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About Lightpaycoin text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About Valinorpaycoin text */
 margin-right:10px;
 }
 
@@ -1123,7 +1123,7 @@ min-width:410px;
 margin-right:20px;
 margin-left:0;
 margin-top:0;
-background-image: url(':/images/lightpaycoin_logo_horizontal');
+background-image: url(':/images/valinorpaycoin_logo_horizontal');
 background-repeat:none;
 }
 

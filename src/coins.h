@@ -20,7 +20,7 @@
 
 /** 
 
-    ****Note - for LightPayCoin we added fCoinStake to the 2nd bit. Keep in mind when reading the following and adjust as needed.
+    ****Note - for ValinorPayCoin we added fCoinStake to the 2nd bit. Keep in mind when reading the following and adjust as needed.
  * Pruned version of CTransaction: only retains metadata and unspent transaction outputs
  *
  * Serialized format:
@@ -457,8 +457,8 @@ public:
     unsigned int GetCacheSize() const;
 
     /** 
-     * Amount of lightpaycoin coming in to a transaction
-     * Note that lightweight clients may not know anything besides the hash of previous transactions,
+     * Amount of valinorpaycoin coming in to a transaction
+     * Note that valinorweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
      * @param[in] tx	transaction for which we are checking input total

@@ -62,12 +62,12 @@
         <translation>Endereços de recebimento</translation>
     </message>
     <message>
-        <source>These are your LightPayCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Esses são seus endereços LightPayCoin para enviar pagamentos. Sempre confira a quantidade e os endereços de destino antes de enviar moedas.</translation>
+        <source>These are your ValinorPayCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Esses são seus endereços ValinorPayCoin para enviar pagamentos. Sempre confira a quantidade e os endereços de destino antes de enviar moedas.</translation>
     </message>
     <message>
-        <source>These are your LightPayCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Esses são seus endereços LightPayCoin para receber pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
+        <source>These are your ValinorPayCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Esses são seus endereços ValinorPayCoin para receber pagamentos. É recomendado usar um novo endereço para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Confirmar encriptação da carteira</translation>
     </message>
     <message>
-        <source>LightPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
-        <translation>LightPayCoin encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas LPCs contra roubo por malware infectando seu computador.</translation>
+        <source>ValinorPayCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your LPCs from being stolen by malware infecting your computer.</source>
+        <translation>ValinorPayCoin encerrará para terminar o processo de encriptação. Lembre-se que encriptar sua carteira não protege completamente suas LPCs contra roubo por malware infectando seu computador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -239,16 +239,16 @@
         <translation>Encriptar com &amp;BIP 38</translation>
     </message>
     <message>
-        <source>Enter a Lightpaycoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Digite um endereço Lightpaycoin que você gostaria de criptografar usando BIP 38. Digite uma frase secreta na caixa do meio. Pressione criptografar para calcular a chave privada criptografada.</translation>
+        <source>Enter a Valinorpaycoin Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Digite um endereço Valinorpaycoin que você gostaria de criptografar usando BIP 38. Digite uma frase secreta na caixa do meio. Pressione criptografar para calcular a chave privada criptografada.</translation>
     </message>
     <message>
         <source>Address:</source>
         <translation>Endereço:</translation>
     </message>
     <message>
-        <source>The LightPayCoin address to sign the message with</source>
-        <translation>Um endereço LightPayCoin para assinar a mensagem</translation>
+        <source>The ValinorPayCoin address to sign the message with</source>
+        <translation>Um endereço ValinorPayCoin para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -279,8 +279,8 @@
         <translation>Copiar a assinatura para a area de trabalho</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LightPayCoin address</source>
-        <translation>Assinar a Mensagem para provar que você e dono desse endereço LightPayCoin.</translation>
+        <source>Sign the message to prove you own this ValinorPayCoin address</source>
+        <translation>Assinar a Mensagem para provar que você e dono desse endereço ValinorPayCoin.</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -299,8 +299,8 @@
         <translation>Criptografia BIP 38</translation>
     </message>
     <message>
-        <source>The LightPayCoin address the message was signed with</source>
-        <translation>O endereço LightPayCoin que foi assinado com</translation>
+        <source>The ValinorPayCoin address the message was signed with</source>
+        <translation>O endereço ValinorPayCoin que foi assinado com</translation>
     </message>
     <message>
         <source>Decrypted Key:</source>
@@ -633,8 +633,8 @@
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>The LightPayCoin address to sign the message with</source>
-        <translation>Um endereço LightPayCoin para assinar a mensagem</translation>
+        <source>The ValinorPayCoin address to sign the message with</source>
+        <translation>Um endereço ValinorPayCoin para assinar a mensagem</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -665,12 +665,12 @@
         <translation>Copiar a assinatura para a area de trabalho</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LightPayCoin address</source>
-        <translation>Assinar a Mensagem para provar que você e dono desse endereço LightPayCoin.</translation>
+        <source>Sign the message to prove you own this ValinorPayCoin address</source>
+        <translation>Assinar a Mensagem para provar que você e dono desse endereço ValinorPayCoin.</translation>
     </message>
     <message>
-        <source>The LightPayCoin address the message was signed with</source>
-        <translation>O endereço LightPayCoin que foi assinado com</translation>
+        <source>The ValinorPayCoin address the message was signed with</source>
+        <translation>O endereço ValinorPayCoin que foi assinado com</translation>
     </message>
     <message>
         <source>Reset all sign message fields</source>
@@ -868,14 +868,14 @@
     </message>
     </context>
 <context>
-    <name>lightpaycoin-core</name>
+    <name>valinorpaycoin-core</name>
     <message>
         <source>Delete all wallet transactions and only recover those parts of the blockchain through -rescan on startup</source>
         <translation>Deletar todas as transações da carteira e somente recuperar aquelas partes do blockchain através de -rescan na inicialização</translation>
     </message>
     <message>
-        <source>Disable all LightPayCoin specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
-        <translation>Desabilitar todas as funcionacilidades específicas da LightPayCoin (Masternodes, Ofuscação, SwiftTX, Budgeting) (0-1, default %u)</translation>
+        <source>Disable all ValinorPayCoin specific functionality (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, default: %u)</source>
+        <translation>Desabilitar todas as funcionacilidades específicas da ValinorPayCoin (Masternodes, Ofuscação, SwiftTX, Budgeting) (0-1, default %u)</translation>
     </message>
     <message>
         <source>Connect through SOCKS5 proxy</source>
@@ -1242,8 +1242,8 @@
         <translation>Carteira esta bloqueada.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart LightPayCoin Core to complete</source>
-        <translation>Carteira precisa ser reescrita: reinicie o LightPayCoin Core para completar.</translation>
+        <source>Wallet needed to be rewritten: restart ValinorPayCoin Core to complete</source>
+        <translation>Carteira precisa ser reescrita: reinicie o ValinorPayCoin Core para completar.</translation>
     </message>
     <message>
         <source>Wallet options:</source>

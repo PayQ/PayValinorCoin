@@ -1,12 +1,12 @@
-LightPayCoin (fork of PIVX) integration/staging repository
+ValinorPayCoin (fork of PIVX) integration/staging repository
 ======================================
 
 
-It is recommended [use the shell script](https://github.com/lpcproject/lpcinstall) to install a LightPayCoin Masternode on a Linux server running Ubuntu 14.04 or 16.04
+It is recommended [use the shell script](https://github.com/lpcproject/lpcinstall) to install a ValinorPayCoin Masternode on a Linux server running Ubuntu 14.04 or 16.04
 
 ***
 
-Quick installation of the LightPayCoin daemon under linux. See detailed instructions there [build-unix.md](build-unix.md)
+Quick installation of the ValinorPayCoin daemon under linux. See detailed instructions there [build-unix.md](build-unix.md)
 
 Installation of libraries (using root user):
 
@@ -19,33 +19,33 @@ Installation of libraries (using root user):
 Cloning the repository and compiling (use any user with the sudo group):
 
     cd
-    git clone https://github.com/lpcproject/LightPayCoin.git
-    cd LightPayCoin
+    git clone https://github.com/lpcproject/ValinorPayCoin.git
+    cd ValinorPayCoin
     ./autogen.sh
     ./configure
     sudo make install
     cd src
-    sudo strip lightpaycoind
-    sudo strip lightpaycoin-cli
-    sudo strip lightpaycoin-tx
+    sudo strip valinorpaycoind
+    sudo strip valinorpaycoin-cli
+    sudo strip valinorpaycoin-tx
     cd ..
 
 Running the daemon:
 
-    lightpaycoind 
+    valinorpaycoind 
 
 Stopping the daemon:
 
-    lightpaycoin-cli stop
+    valinorpaycoin-cli stop
 
 Demon status:
 
-    lightpaycoin-cli getinfo
-    lightpaycoin-cli mnsync status
+    valinorpaycoin-cli getinfo
+    valinorpaycoin-cli mnsync status
 
 All binaries for different operating systems, you can download in the releases repository:
 
-https://github.com/lpcproject/LightPayCoin/releases
+https://github.com/lpcproject/ValinorPayCoin/releases
 
 P2P port: 39797, RPC port: 39798
 -

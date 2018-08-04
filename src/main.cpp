@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
-// Copyright (c) 2018 The LightPayCoin developers
+// Copyright (c) 2018 The ValinorPayCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,7 +42,7 @@ using namespace boost;
 using namespace std;
 
 #if defined(NDEBUG)
-#error "LightPayCoin cannot be compiled without assertions."
+#error "ValinorPayCoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -152,7 +152,7 @@ uint32_t nBlockSequenceId = 1;
      */
 map<uint256, NodeId> mapBlockSource;
 
-/** Blocks that are in flight, and that are in the queue to be downloaded. Protected by cs_main. */
+/** Blocks that are in fvalinor, and that are in the queue to be downloaded. Protected by cs_main. */
 struct QueuedBlock {
     uint256 hash;
     CBlockIndex* pindex;        //! Optional.
@@ -160,9 +160,9 @@ struct QueuedBlock {
     int nValidatedQueuedBefore; //! Number of blocks queued with validated headers (globally) at the time this one is requested.
     bool fValidatedHeaders;     //! Whether this block has validated headers at the time of request.
 };
-map<uint256, pair<NodeId, list<QueuedBlock>::iterator> > mapBlocksInFlight;
+map<uint256, pair<NodeId, list<QueuedBlock>::iterator> > mapBlocksInFvalinor;
 
-/** Number of blocks in flight with validated headers. */
+/** Number of blocks in fvalinor with validated headers. */
 int nQueuedValidatedHeaders = 0;
 
 /** Number of preferable block download peers. */
@@ -283,8 +283,8 @@ struct CNodeState {
     bool fSyncStarted;
     //! Since when we're stalling block download progress (in microseconds), or 0.
     int64_t nStallingSince;
-    list<QueuedBlock> vBlocksInFlight;
-    int nBlocksInFlight;
+    list<QueuedBlock> vBlocksInFvalinor;
+    int nBlocksInFvalinor;
     //! Whether we consider this a preferred download peer.
     bool fPreferredDownload;
 
@@ -298,7 +298,7 @@ struct CNodeState {
         pindexLastCommonBlock = NULL;
         fSyncStarted = false;
         nStallingSince = 0;
-        nBlocksInFlight = 0;
+        nBlocksInFvalinor = 0;
         fPreferredDownload = false;
     }
 };
@@ -357,8 +357,8 @@ void FinalizeNode(NodeId nodeid)
         AddressCurrentlyConnected(state->address);
     }
 
-    BOOST_FOREACH (const QueuedBlock& entry, state->vBlocksInFlight)
-        mapBlocksInFlight.erase(entry.hash);
+    BOOST_FOREACH (const QueuedBlock& entry, state->vBlocksInFvalinor)
+        mapBlocksInFvalinor.erase(entry.hash);
     EraseOrphansFor(nodeid);
     nPreferredDownload -= state->fPreferredDownload;
 
@@ -368,19 +368,19 @@ void FinalizeNode(NodeId nodeid)
 // Requires cs_main.
 void MarkBlockAsReceived(const uint256& hash)
 {
-    map<uint256, pair<NodeId, list<QueuedBlock>::iterator> >::iterator itInFlight = mapBlocksInFlight.find(hash);
-    if (itInFlight != mapBlocksInFlight.end()) {
-        CNodeState* state = State(itInFlight->second.first);
-        nQueuedValidatedHeaders -= itInFlight->second.second->fValidatedHeaders;
-        state->vBlocksInFlight.erase(itInFlight->second.second);
-        state->nBlocksInFlight--;
+    map<uint256, pair<NodeId, list<QueuedBlock>::iterator> >::iterator itInFvalinor = mapBlocksInFvalinor.find(hash);
+    if (itInFvalinor != mapBlocksInFvalinor.end()) {
+        CNodeState* state = State(itInFvalinor->second.first);
+        nQueuedValidatedHeaders -= itInFvalinor->second.second->fValidatedHeaders;
+        state->vBlocksInFvalinor.erase(itInFvalinor->second.second);
+        state->nBlocksInFvalinor--;
         state->nStallingSince = 0;
-        mapBlocksInFlight.erase(itInFlight);
+        mapBlocksInFvalinor.erase(itInFvalinor);
     }
 }
 
 // Requires cs_main.
-void MarkBlockAsInFlight(NodeId nodeid, const uint256& hash, CBlockIndex* pindex = NULL)
+void MarkBlockAsInFvalinor(NodeId nodeid, const uint256& hash, CBlockIndex* pindex = NULL)
 {
     CNodeState* state = State(nodeid);
     assert(state != NULL);
@@ -390,9 +390,9 @@ void MarkBlockAsInFlight(NodeId nodeid, const uint256& hash, CBlockIndex* pindex
 
     QueuedBlock newentry = {hash, pindex, GetTimeMicros(), nQueuedValidatedHeaders, pindex != NULL};
     nQueuedValidatedHeaders += newentry.fValidatedHeaders;
-    list<QueuedBlock>::iterator it = state->vBlocksInFlight.insert(state->vBlocksInFlight.end(), newentry);
-    state->nBlocksInFlight++;
-    mapBlocksInFlight[hash] = std::make_pair(nodeid, it);
+    list<QueuedBlock>::iterator it = state->vBlocksInFvalinor.insert(state->vBlocksInFvalinor.end(), newentry);
+    state->nBlocksInFvalinor++;
+    mapBlocksInFvalinor[hash] = std::make_pair(nodeid, it);
 }
 
 /** Check whether the last unknown block a peer advertized is not yet known. */
@@ -450,7 +450,7 @@ CBlockIndex* LastCommonAncestor(CBlockIndex* pa, CBlockIndex* pb)
     return pa;
 }
 
-/** Update pindexLastCommonBlock and add not-in-flight missing successors to vBlocks, until it has
+/** Update pindexLastCommonBlock and add not-in-fvalinor missing successors to vBlocks, until it has
  *  at most count entries. */
 void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBlockIndex*>& vBlocks, NodeId& nodeStaller)
 {
@@ -502,7 +502,7 @@ void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBl
         }
 
         // Iterate over those blocks in vToFetch (in forward direction), adding the ones that
-        // are not yet downloaded and not in flight to vBlocks. In the mean time, update
+        // are not yet downloaded and not in fvalinor to vBlocks. In the mean time, update
         // pindexLastCommonBlock as long as all ancestors are already downloaded.
         BOOST_FOREACH (CBlockIndex* pindex, vToFetch) {
             if (!pindex->IsValid(BLOCK_VALID_TREE)) {
@@ -512,8 +512,8 @@ void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBl
             if (pindex->nStatus & BLOCK_HAVE_DATA) {
                 if (pindex->nChainTx)
                     state->pindexLastCommonBlock = pindex;
-            } else if (mapBlocksInFlight.count(pindex->GetBlockHash()) == 0) {
-                // The block is not already downloaded, and not yet in flight.
+            } else if (mapBlocksInFvalinor.count(pindex->GetBlockHash()) == 0) {
+                // The block is not already downloaded, and not yet in fvalinor.
                 if (pindex->nHeight > nWindowEnd) {
                     // We reached the end of the window.
                     if (vBlocks.size() == 0 && waitingfor != nodeid) {
@@ -527,8 +527,8 @@ void FindNextBlocksToDownload(NodeId nodeid, unsigned int count, std::vector<CBl
                     return;
                 }
             } else if (waitingfor == -1) {
-                // This is the first already-in-flight block.
-                waitingfor = mapBlocksInFlight[pindex->GetBlockHash()].first;
+                // This is the first already-in-fvalinor block.
+                waitingfor = mapBlocksInFvalinor[pindex->GetBlockHash()].first;
             }
         }
     }
@@ -545,9 +545,9 @@ bool GetNodeStateStats(NodeId nodeid, CNodeStateStats& stats)
     stats.nMisbehavior = state->nMisbehavior;
     stats.nSyncHeight = state->pindexBestKnownBlock ? state->pindexBestKnownBlock->nHeight : -1;
     stats.nCommonHeight = state->pindexLastCommonBlock ? state->pindexLastCommonBlock->nHeight : -1;
-    BOOST_FOREACH (const QueuedBlock& queue, state->vBlocksInFlight) {
+    BOOST_FOREACH (const QueuedBlock& queue, state->vBlocksInFvalinor) {
         if (queue.pindex)
-            stats.vHeightInFlight.push_back(queue.pindex->nHeight);
+            stats.vHeightInFvalinor.push_back(queue.pindex->nHeight);
     }
     return true;
 }
@@ -2345,7 +2345,7 @@ static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck()
 {
-    RenameThread("lightpaycoin-scriptch");
+    RenameThread("valinorpaycoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3440,7 +3440,7 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
                 nHeight = (*mi).second->nHeight + 1;
         }
 
-        // LightPayCoin
+        // ValinorPayCoin
         // It is entierly possible that we don't have enough data and this could fail
         // (i.e. the block could indeed be valid). Store the block for later consideration
         // but issue an initial reject message.
@@ -5080,7 +5080,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
             if (inv.type == MSG_BLOCK) {
                 UpdateBlockAvailability(pfrom->GetId(), inv.hash);
-                if (!fAlreadyHave && !fImporting && !fReindex && !mapBlocksInFlight.count(inv.hash)) {
+                if (!fAlreadyHave && !fImporting && !fReindex && !mapBlocksInFvalinor.count(inv.hash)) {
                     // Add this to the list of blocks to request
                     vToFetch.push_back(inv);
                     LogPrint("net", "getblocks (%d) %s to peer=%d\n", pindexBestHeader->nHeight, inv.hash.ToString(), pfrom->id);
@@ -5976,13 +5976,13 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
             LogPrintf("Peer=%d is stalling block download, disconnecting\n", pto->id);
             pto->fDisconnect = true;
         }
-        // In case there is a block that has been in flight from this peer for (2 + 0.5 * N) times the block interval
-        // (with N the number of validated blocks that were in flight at the time it was requested), disconnect due to
-        // timeout. We compensate for in-flight blocks to prevent killing off peers due to our own downstream link
-        // being saturated. We only count validated in-flight blocks so peers can't advertize nonexisting block hashes
+        // In case there is a block that has been in fvalinor from this peer for (2 + 0.5 * N) times the block interval
+        // (with N the number of validated blocks that were in fvalinor at the time it was requested), disconnect due to
+        // timeout. We compensate for in-fvalinor blocks to prevent killing off peers due to our own downstream link
+        // being saturated. We only count validated in-fvalinor blocks so peers can't advertize nonexisting block hashes
         // to unreasonably increase our timeout.
-        if (!pto->fDisconnect && state.vBlocksInFlight.size() > 0 && state.vBlocksInFlight.front().nTime < nNow - 500000 * Params().TargetSpacing() * (4 + state.vBlocksInFlight.front().nValidatedQueuedBefore)) {
-            LogPrintf("Timeout downloading block %s from peer=%d, disconnecting\n", state.vBlocksInFlight.front().hash.ToString(), pto->id);
+        if (!pto->fDisconnect && state.vBlocksInFvalinor.size() > 0 && state.vBlocksInFvalinor.front().nTime < nNow - 500000 * Params().TargetSpacing() * (4 + state.vBlocksInFvalinor.front().nValidatedQueuedBefore)) {
+            LogPrintf("Timeout downloading block %s from peer=%d, disconnecting\n", state.vBlocksInFvalinor.front().hash.ToString(), pto->id);
             pto->fDisconnect = true;
         }
 
@@ -5990,17 +5990,17 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
         // Message: getdata (blocks)
         //
         vector<CInv> vGetData;
-        if (!pto->fDisconnect && !pto->fClient && fFetch && state.nBlocksInFlight < MAX_BLOCKS_IN_TRANSIT_PER_PEER) {
+        if (!pto->fDisconnect && !pto->fClient && fFetch && state.nBlocksInFvalinor < MAX_BLOCKS_IN_TRANSIT_PER_PEER) {
             vector<CBlockIndex*> vToDownload;
             NodeId staller = -1;
-            FindNextBlocksToDownload(pto->GetId(), MAX_BLOCKS_IN_TRANSIT_PER_PEER - state.nBlocksInFlight, vToDownload, staller);
+            FindNextBlocksToDownload(pto->GetId(), MAX_BLOCKS_IN_TRANSIT_PER_PEER - state.nBlocksInFvalinor, vToDownload, staller);
             BOOST_FOREACH (CBlockIndex* pindex, vToDownload) {
                 vGetData.push_back(CInv(MSG_BLOCK, pindex->GetBlockHash()));
-                MarkBlockAsInFlight(pto->GetId(), pindex->GetBlockHash(), pindex);
+                MarkBlockAsInFvalinor(pto->GetId(), pindex->GetBlockHash(), pindex);
                 LogPrintf("Requesting block %s (%d) peer=%d\n", pindex->GetBlockHash().ToString(),
                     pindex->nHeight, pto->id);
             }
-            if (state.nBlocksInFlight == 0 && staller != -1) {
+            if (state.nBlocksInFvalinor == 0 && staller != -1) {
                 if (State(staller)->nStallingSince == 0) {
                     State(staller)->nStallingSince = nNow;
                     LogPrint("net", "Stall started peer=%d\n", staller);

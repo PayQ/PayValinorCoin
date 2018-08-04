@@ -1,60 +1,60 @@
-Sample init scripts and service configuration for lightpaycoind
+Sample init scripts and service configuration for valinorpaycoind
 ==========================================================
 
 Sample scripts and configuration files for systemd, Upstart and OpenRC
 can be found in the contrib/init folder.
 
-    contrib/init/lightpaycoind.service:    systemd service unit configuration
-    contrib/init/lightpaycoind.openrc:     OpenRC compatible SysV style init script
-    contrib/init/lightpaycoind.openrcconf: OpenRC conf.d file
-    contrib/init/lightpaycoind.conf:       Upstart service configuration file
-    contrib/init/lightpaycoind.init:       CentOS compatible SysV style init script
+    contrib/init/valinorpaycoind.service:    systemd service unit configuration
+    contrib/init/valinorpaycoind.openrc:     OpenRC compatible SysV style init script
+    contrib/init/valinorpaycoind.openrcconf: OpenRC conf.d file
+    contrib/init/valinorpaycoind.conf:       Upstart service configuration file
+    contrib/init/valinorpaycoind.init:       CentOS compatible SysV style init script
 
 1. Service User
 ---------------------------------
 
-All three startup configurations assume the existence of a "lightpaycoin" user
+All three startup configurations assume the existence of a "valinorpaycoin" user
 and group.  They must be created before attempting to use these scripts.
 
 2. Configuration
 ---------------------------------
 
-At a bare minimum, lightpaycoind requires that the rpcpassword setting be set
+At a bare minimum, valinorpaycoind requires that the rpcpassword setting be set
 when running as a daemon.  If the configuration file does not exist or this
-setting is not set, lightpaycoind will shutdown promptly after startup.
+setting is not set, valinorpaycoind will shutdown promptly after startup.
 
 This password does not have to be remembered or typed as it is mostly used
-as a fixed token that lightpaycoind and client programs read from the configuration
+as a fixed token that valinorpaycoind and client programs read from the configuration
 file, however it is recommended that a strong and secure password be used
 as this password is security critical to securing the wallet should the
 wallet be enabled.
 
-If lightpaycoind is run with "-daemon" flag, and no rpcpassword is set, it will
+If valinorpaycoind is run with "-daemon" flag, and no rpcpassword is set, it will
 print a randomly generated suitable password to stderr.  You can also
 generate one from the shell yourself like this:
 
 bash -c 'tr -dc a-zA-Z0-9 < /dev/urandom | head -c32 && echo'
 
-Once you have a password in hand, set rpcpassword= in /etc/lightpaycoin/lightpaycoin.conf
+Once you have a password in hand, set rpcpassword= in /etc/valinorpaycoin/valinorpaycoin.conf
 
 For an example configuration file that describes the configuration settings,
-see contrib/debian/examples/lightpaycoin.conf.
+see contrib/debian/examples/valinorpaycoin.conf.
 
 3. Paths
 ---------------------------------
 
 All three configurations assume several paths that might need to be adjusted.
 
-Binary:              /usr/bin/lightpaycoind
-Configuration file:  /etc/lightpaycoin/lightpaycoin.conf
-Data directory:      /var/lib/lightpaycoind
-PID file:            /var/run/lightpaycoind/lightpaycoind.pid (OpenRC and Upstart)
-                     /var/lib/lightpaycoind/lightpaycoind.pid (systemd)
+Binary:              /usr/bin/valinorpaycoind
+Configuration file:  /etc/valinorpaycoin/valinorpaycoin.conf
+Data directory:      /var/lib/valinorpaycoind
+PID file:            /var/run/valinorpaycoind/valinorpaycoind.pid (OpenRC and Upstart)
+                     /var/lib/valinorpaycoind/valinorpaycoind.pid (systemd)
 
 The configuration file, PID directory (if applicable) and data directory
-should all be owned by the lightpaycoin user and group.  It is advised for security
+should all be owned by the valinorpaycoin user and group.  It is advised for security
 reasons to make the configuration file and data directory only readable by the
-lightpaycoin user and group.  Access to lightpaycoin-cli and other lightpaycoind rpc clients
+valinorpaycoin user and group.  Access to valinorpaycoin-cli and other valinorpaycoind rpc clients
 can then be controlled by group membership.
 
 4. Installing Service Configuration
@@ -66,19 +66,19 @@ Installing this .service file consists on just copying it to
 /usr/lib/systemd/system directory, followed by the command
 "systemctl daemon-reload" in order to update running systemd configuration.
 
-To test, run "systemctl start lightpaycoind" and to enable for system startup run
-"systemctl enable lightpaycoind"
+To test, run "systemctl start valinorpaycoind" and to enable for system startup run
+"systemctl enable valinorpaycoind"
 
 4b) OpenRC
 
-Rename lightpaycoind.openrc to lightpaycoind and drop it in /etc/init.d.  Double
+Rename valinorpaycoind.openrc to valinorpaycoind and drop it in /etc/init.d.  Double
 check ownership and permissions and make it executable.  Test it with
-"/etc/init.d/lightpaycoind start" and configure it to run on startup with
-"rc-update add lightpaycoind"
+"/etc/init.d/valinorpaycoind start" and configure it to run on startup with
+"rc-update add valinorpaycoind"
 
 4c) Upstart (for Debian/Ubuntu based distributions)
 
-Drop lightpaycoind.conf in /etc/init.  Test by running "service lightpaycoind start"
+Drop valinorpaycoind.conf in /etc/init.  Test by running "service valinorpaycoind start"
 it will automatically start on reboot.
 
 NOTE: This script is incompatible with CentOS 5 and Amazon Linux 2014 as they
@@ -86,11 +86,11 @@ use old versions of Upstart and do not supply the start-stop-daemon uitility.
 
 4d) CentOS
 
-Copy lightpaycoind.init to /etc/init.d/lightpaycoind. Test by running "service lightpaycoind start".
+Copy valinorpaycoind.init to /etc/init.d/valinorpaycoind. Test by running "service valinorpaycoind start".
 
-Using this script, you can adjust the path and flags to the lightpaycoind program by
-setting the LightPayCoinD and FLAGS environment variables in the file
-/etc/sysconfig/lightpaycoind. You can also use the DAEMONOPTS environment variable here.
+Using this script, you can adjust the path and flags to the valinorpaycoind program by
+setting the ValinorPayCoinD and FLAGS environment variables in the file
+/etc/sysconfig/valinorpaycoind. You can also use the DAEMONOPTS environment variable here.
 
 5. Auto-respawn
 -----------------------------------

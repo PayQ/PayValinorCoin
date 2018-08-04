@@ -345,7 +345,7 @@
        <item row="16" column="0">
         <widget class="QPushButton" name="openDebugLogfileButton">
          <property name="toolTip">
-          <string>Open the LightPayCoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
+          <string>Open the ValinorPayCoin debug log file from the current data directory. This can take a few seconds for large log files.</string>
          </property>
          <property name="text">
           <string>&amp;Open</string>
@@ -414,7 +414,7 @@
             <string/>
            </property>
            <property name="icon">
-            <iconset resource="../lightpaycoin.qrc">
+            <iconset resource="../valinorpaycoin.qrc">
              <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
            </property>
            <property name="shortcut">
@@ -521,7 +521,7 @@
                 <property name="palette">
                  <palette>
                   <active>
-                   <colorrole role="Light">
+                   <colorrole role="Valinor">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
                       <red>0</red>
@@ -532,7 +532,7 @@
                    </colorrole>
                   </active>
                   <inactive>
-                   <colorrole role="Light">
+                   <colorrole role="Valinor">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
                       <red>0</red>
@@ -543,7 +543,7 @@
                    </colorrole>
                   </inactive>
                   <disabled>
-                   <colorrole role="Light">
+                   <colorrole role="Valinor">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
                       <red>0</red>
@@ -601,7 +601,7 @@
                 <property name="palette">
                  <palette>
                   <active>
-                   <colorrole role="Light">
+                   <colorrole role="Valinor">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
                       <red>255</red>
@@ -612,7 +612,7 @@
                    </colorrole>
                   </active>
                   <inactive>
-                   <colorrole role="Light">
+                   <colorrole role="Valinor">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
                       <red>255</red>
@@ -623,7 +623,7 @@
                    </colorrole>
                   </inactive>
                   <disabled>
-                   <colorrole role="Light">
+                   <colorrole role="Valinor">
                     <brush brushstyle="SolidPattern">
                      <color alpha="255">
                       <red>255</red>
@@ -695,7 +695,7 @@
          <property name="sortingEnabled">
           <bool>true</bool>
          </property>
-         <attribute name="horizontalHeaderHighlightSections">
+         <attribute name="horizontalHeaderHighvalinorSections">
           <bool>false</bool>
          </attribute>
         </widget>
@@ -1348,7 +1348,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../lightpaycoin.qrc"/>
+  <include location="../valinorpaycoin.qrc"/>
  </resources>
  <connections/>
 </ui>
